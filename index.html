@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louises Julegave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <h1>
+            Kære Louise
+        </h1>
+        <p>
+            <i>"Julen varer længe -<br>koster mange penge"</i>
+        </p>
+        <p>
+            Ovenpå et strabadserende år fortjener du en ferie uden så mange bekymringer.
+        </p>
+        <div class="mouse"></div>
+    </div>
+
+    <div class="page">
+        <p>
+            Jeg håber min gave til dig kan hjælpe med netop det.
+        </p>
+        <div class="mouse"></div>
+    </div>
+
+    <div class="page">
+        <p>
+            Derfor kan du scanne denne QR-kode ved en automat for at få
+        </p>
+        <h2>
+            1 stk. liftkort til hele perioden
+        </h2>
+        <img src="qr-kode.png" alt="QR kode" height="200px">
+    </div>
+</body>
+</html>
+
+<style>
+body {
+    background-color: #061123;
+    font-family: 'Raleway', sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    scroll-snap-type: y mandatory;
+}
+
+.page {
+    scroll-snap-align: start;
+    display: flex;
+    padding: 0 10vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mouse {
+	width: 30px;
+	height: 60px;
+    margin-top: 50px;
+	border: 2px solid #333;
+	border-radius: 60px;
+	position: relative;
+	&::before {
+		content: '';
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #333;
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 10px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 10px;
+	}
+}
+
+img {
+    margin-top: 2rem;
+}
+</style>
